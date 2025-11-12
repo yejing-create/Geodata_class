@@ -1,6 +1,6 @@
 # An Analysis of Meander Migration Rates Pre- and Post-Cutoff
 **Authors:** Ye JING
-**Journal:** AESDA G690
+**Class:** AESDA G690
 
 ---
 
@@ -9,7 +9,7 @@
 Meandering rivers are among the most common and recognizable features in fluvial landscapes [CITATION: camporeale2007], providing resources for industry, agriculture, and urban water use, in addition to diverse habitat for flora and fauna [CITATION: lizhi2023]. The characteristic sinuous form of meandering rivers is maintained by two recurrent planform-changing processes [CITATION: camporeale2005]. One process is meander elongation, which increases river sinuosity. By this process, the channel migrates laterally within the channel belt. An example of this river migration from 2006 (green meander scar) to 2017 (yellow meander scar) is shown in Fig. 1.
 The second process is channel cut-off, which is the sudden reduction of sinuosity when a river bend is shortened by a new channel that connects two bend limbs of the same river [CITATION: camporeale2005, lizhi2023, gao2024]. A cutoff example is given in the Landsat imagery on the right side of Fig. 1. The cut-off process shortens the river length, and the abandoned channel segment can sometimes create an oxbow lake in the floodplain [CITATION: constantine2010, gallardo2011, guo2023, Maitan2024].
 
-**Figure 1:** ![Multi-stage (modern and ancient) meander cutoffs along the Ucayali River, Peru (7$^\circ$38$'$2.15$"$ S, 75$^\circ$0$'$2.10$"$ W, affecting towns such as Santa Maria, Tumbes, San Roque, Monte de Cion, and others). Notice that the Ucayali River is dynamic inside of the geologic valley. Seven Landsat imageries (from 2006 to 2017) of the central river bend are shown, at where a cutoff occurred in 2014–2015. The maximum migration rate during this period was over 200 m/year. Figure from Li et al.,(2023).](YOUR_URL_FOR_fig1.png)
+**Figure 1:** ![Multi-stage (modern and ancient) meander cutoffs along the Ucayali River, Peru (7$^\circ$38$'$2.15$"$ S, 75$^\circ$0$'$2.10$"$ W, affecting towns such as Santa Maria, Tumbes, San Roque, Monte de Cion, and others). Notice that the Ucayali River is dynamic inside of the geologic valley. Seven Landsat imageries (from 2006 to 2017) of the central river bend are shown, at where a cutoff occurred in 2014–2015. The maximum migration rate during this period was over 200 m/year. Figure from Li et al.,(2023).](https://github.com/yejing-create/Geodata_class/blob/main/Final_project/images/fig1.png)
 
 Cutoffs are also known as accelerators of the migration rate over both short and long timescales. Over short time scales, cutoffs act as “shot” perturbations [CITATION: camporeale2008] to river morphodynamics by increasing the bed slope and stream power both upstream and downstream [CITATION: hooke2023], injecting downstream pulses of sediment excavated from the floodplain during chute channel formation [CITATION: zingerng], and substantially altering the local channel planform and hydrodynamics [CITATION: zingerjgr].
 Over long time scales, cutoffs may influence meander migration rates through the creation of oxbow lakes that augment floodplain resistance heterogeneity [CITATION: schwenk2016].
@@ -32,9 +32,9 @@ With help from colleagues at LSU, I obtained the global distribution of cutoffs 
 
 In the example case shown in Fig. 3, the cutoff occurs between 1996 and 1997 (Fig. 3(b,c)). Thus it is clear that for this case, the duration 1984 - 1996 is the pre-cutoff period whereas the duration 1997 - 2023 is the post-cutoff period. Note that we neglect the period when the cutoff is occurring (1996–1997 in this case). This is because when the cutoff occurs, a new channel is generated and the previous channel is abandoned; thus, the movement of river channels is not a result of migration behavior.
 
-**Figure 2:** ![The global distribution of cutoffs whose widths are larger than 200 m. Blue spots indicate chute cutoffs whereas red spots indicate neck cutoffs.](YOUR_URL_FOR_global_distribution.png)
+**Figure 2:** ![The global distribution of cutoffs whose widths are larger than 200 m. Blue spots indicate chute cutoffs whereas red spots indicate neck cutoffs.](https://github.com/yejing-create/Geodata_class/blob/main/Final_project/images/global_distribution.png)
 
-**Figure 3:** ![The example of river masks pre- and post-cutoff. (a) The river mask evolves to a cutoff event. (b) The river mask just before the cutoff event. (c) The river mask just after the cutoff event. (d) A river mask post-cutoff.](YOUR_URL_FOR_figure2.pdf)
+**Figure 3:** ![The example of river masks pre- and post-cutoff. (a) The river mask evolves to a cutoff event. (b) The river mask just before the cutoff event. (c) The river mask just after the cutoff event. (d) A river mask post-cutoff.](https://github.com/yejing-create/Geodata_class/blob/main/Final_project/images/figure2.pdf)
 
 After obtaining this river mask, I have several methods to compute the migration rate. The first way is the easiest: by merging two river masks from two adjacent years, we compute the value difference of the blue band between the two river masks. If the value difference is negative, the pixel has switched from a deep blue (river) to a shallow blue (land), which indicates that the river has migrated away from that pixel. Conversely, if the value is positive, it means the pixel has switched from land to river. Then we compute the number of pixels with negative ($N_{neg}$) and positive ($N_{pos}$) values, respectively. We calculate the migration pixel number $M$ and channel enlargement/reduction $\Delta C$ by:
 
@@ -59,7 +59,7 @@ I expect to generate four figures.
 
 Figure 1 will be a box chart; a sketch is shown in Fig. 4.
 
-**Figure 4:** ![A sketch of figure 1 as the primary output. Panel 1 indicates how the migration rate accelerated by cutoffs can be differed between neck and chute cutoffs. Panel 2 indicates how the channel enlarge/reduce as a response to cutoff events.](YOUR_URL_FOR_fig4.png)
+**Figure 4:** ![A sketch of figure 1 as the primary output. Panel 1 indicates how the migration rate accelerated by cutoffs can be differed between neck and chute cutoffs. Panel 2 indicates how the channel enlarge/reduce as a response to cutoff events.](https://github.com/yejing-create/Geodata_class/blob/main/Final_project/images/fig4.png)
 
 In Figures 2–4, I will explore the relationship between migration rate and cutoff planform geometries. $\frac{M_{post}}{M_{pre}}$ will be plotted as a function of the length ratio of cutoff, bend curvature, and river type, respectively, to see how the acceleration of migration is affected by these parameters.
 
